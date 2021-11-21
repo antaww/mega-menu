@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    font: 300 14px/18px Roboto;
+    color: #fff;
+}
+
+.container{
+	margin: 50px 100px 0px 100px;
+}
+
+  
+nav{
+    background-color:#23364B;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    z-index: 2;
+}
+
+/* ligne de base */
+nav ul li{
+    display: inline-block;
+    background-color:#23364B;
+    border-right: 1px dotted #547787;
+}
+
+nav ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+}
+
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+    top: 100%;
+}
+
+.droite>ul {
+    left:100%;
+}
+
+.gauche>ul {
+    right:100%;
+}
+
+li.deroulant > ul > li > a {
+    display: block;
+    padding: 20px 22px;
+    text-decoration: none;
+    background-color: #365670;
+    border-bottom: 1px dotted #547787;
+}
+
+.droite ul > li > a, .gauche ul > li > a {
+    background-color: #547787;
+    display: block;
+    border-bottom: 1px dotted #B8C7BC;
+}
+
+
+.droite>ul,
+.gauche>ul{
+  top: 0;
+  /* min-width: 230px; */
+  display: none;
+  border-left: 1px solid #365670;
+}
+
+.Images:hover, .images_deroulant>a:hover +.Images {
+    display:block;
+}
+
+.Images{
+	left:0;
+    width:100%;
+	display:none;
+	color:#fefefe;
+	padding-top:15px;
+	background:#547787;
+	padding-bottom:15px;
+    position: absolute;
+}
+
+.Images h1 {
+    font-size: 15px;
+    margin-top: 0px;
+    text-transform: uppercase;
+}
+
+.fas{
+    vertical-align: middle;
+    font-size:18px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.orange{
+    background-color:#F36428;
+}
+
+nav a{
+    padding: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 20px 22px;
+}
+
+
+
+nav a:hover{
+    /*animation: name duration steps beginAfter apparition */
+    animation: toOrange 500ms steps(40) 0s 1 normal both;
+}
+
+/* déroule quand hover */
+nav ul li:hover > ul{
+    display: inherit;
+}
+
+@keyframes toOrange {
+    to {
+        background-color: #F36428;
+    }
+}
+
